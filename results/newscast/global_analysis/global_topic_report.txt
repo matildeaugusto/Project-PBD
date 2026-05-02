@@ -1,0 +1,26 @@
+=====================================
+GLOBAL TOPIC ANALYSIS (NORMALIZED)
+=====================================
+
+GLOBAL AGENDA SHARE:
+  Politics: 52.1%
+  Labor: 29.5%
+  Other: 15.9%
+  Justice/Crime: 11.1%
+  International: 5.1%
+  Health: 1.6%
+  Accidents: 1.5%
+  Sports: 1.2%
+  Economy: 1.1%
+  Weather: 0.8%
+  Society: 0.8%
+
+TOPIC DIVERSITY (ENTROPY):
+  TVI: 2.278
+  RTP: 2.164
+
+CHANNEL SIMILARITY MATRIX:
+channel       RTP       TVI
+channel                    
+RTP      1.000000  0.913564
+TVI      0.913564  1.000000

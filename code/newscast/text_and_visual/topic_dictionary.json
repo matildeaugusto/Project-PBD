@@ -1,0 +1,78 @@
+{
+  "Politics": [
+    "presidente","partido","parlamento","campanha","eleições",
+    "debate","seguro","marcelo","autárquicas","ps","psd","chega","il",
+    "bloco","democracia","voto","candidato","governante","primeiro ministro",
+    "presidenciais","legislativas","coligação","orçamento de estado","diplomacia",
+    "governamental","política","parlamentar","deputado","ministério"
+  ],
+
+  "Justice/Crime": [
+    "arguido","prisão","detido","crime","justiça","tribunal","processo","investigação",
+    "suspeito","acusado","polícia","mp","pj","violência","homicídio","assalto",
+    "roubo","sequestro","pena","sentença","julgamento","advogado","procurador",
+    "criminoso","detenção","capturado","buscas","corrupção","fraude","lavagem"
+  ],
+
+  "International": [
+    "eua","russia","ucrânia","putin","guerra","venezuela","trump","maduro","europa",
+    "frança","espanha","china","israel","gaza","onu","nato","reino unido","alemanha",
+    "italia","polonia","coreia","japão","iran","iraque","síria","conflito","ataque",
+    "bombardeamento","fronteira","diplomacia","internacional","geopolítica",
+    "héireann","government","ireland","rialtas","abu","dhabi","airways","washington"
+  ],
+
+  "Economy": [
+    "economia","inflação","preços","mercado","exportações","emprego","salário","banco",
+    "finanças","impostos","energia","petroleo","combustível","orçamento","défice",
+    "lucro","bolsa","investimento","juros","crédito","economista","setor","indústria",
+    "property","venda","carros","aumenta","ativos","congelados"
+  ],
+
+  "Health": [
+    "hospital","saúde","covid","médico","internado","doença","vacina","sns","cirurgia",
+    "hérnia","tratamento","urgência","enfermeiro","consulta","epidemia","vírus",
+    "pandemia","sintomas","diagnóstico","terapia","cuidados intensivos"
+  ],
+
+  "Society": [
+    "educação","família","escola","jovens","cultura","sociedade","habitação","idosos",
+    "crianças","violência doméstica","desigualdade","comunidade","bairro","social",
+    "ensino","professor","aluno","universidade","tradição","evento","festival"
+  ],
+
+  "Sports": [
+    "futebol","liga","benfica","porto","sporting","jogo","treinador","golo","taça",
+    "campeonato","seleção","derrota","vitória","marcador","equipa","atleta","desporto"
+  ],
+
+  "Labor": [
+    "greve","geral","trabalho","legislação","laboral","flexível","sindicatos",
+    "negociar","continuam","disponíveis","diálogo","pressão"
+  ],
+
+  "Accidents": [
+    "acidente","colisão","feridos","mortes","incêndio","desastre","queda","explosão",
+    "resgate","emergência","ambulância","bombeiros","derrocada","choque","capotamento",
+    "fuga","territórios"
+  ],
+
+  "Weather": [
+    "chuva","temperatura","vento","neve","meteorologia","alerta","inundação",
+    "onda de calor","trovoada","granizo","frente fria","frente quente"
+  ],
+
+  "Technology": [
+    "tecnologia","internet","ciberataque","digital","dados","inteligência artificial",
+    "software","hardware","aplicação","rede","computador","plataforma","online"
+  ],
+
+  "Noise": [
+    "tele","imagem","exp","direto","real","person","named","address","second",
+    "viajou","outubro","novembro","expo","vintex","unclassified","secwar"
+  ],
+
+  "Names": [
+    "sócrates","josé","pete","hegseth","daniel","mateus","antónio","joana","nuno"
+  ]
+}

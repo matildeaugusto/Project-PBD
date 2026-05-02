@@ -1,0 +1,34 @@
+
+================================================================================
+Analyzing file: /home/matilde/Desktop/PBD/matilde_features/newscast/Telejornal_RTP_Dec_11_ocr.pkl
+================================================================================
+
+Shape: (2854, 2)
+
+Data exported to Excel: /home/matilde/Desktop/PBD/results/newscast/data_structure/Telejornal_RTP_Dec_11_ocr_data.xlsx
+
+Columns:
+['Frame', 'OCR']
+
+First rows:
+                                         Frame                                                OCR
+0  Frames/Telejornal_RTP_Dec_11/frame_1956.jpg  [{'bbox': [426.0, 140.0, 599.0, 168.0], 'text'...
+1  Frames/Telejornal_RTP_Dec_11/frame_1908.jpg  [{'bbox': [875.0, 427.0, 978.0, 456.0], 'text'...
+2  Frames/Telejornal_RTP_Dec_11/frame_2083.jpg  [{'bbox': [71.0, 548.0, 241.0, 576.0], 'text':...
+3  Frames/Telejornal_RTP_Dec_11/frame_1141.jpg  [{'bbox': [884.0, 38.0, 1091.0, 64.0], 'text':...
+4  Frames/Telejornal_RTP_Dec_11/frame_1625.jpg  [{'bbox': [65.0, 548.0, 249.0, 581.0], 'text':...
+
+Data types:
+Frame       str
+OCR      object
+dtype: object
+
+Missing values per column:
+Frame    0
+OCR      0
+dtype: int64
+
+Columns containing vectors/arrays:
+   - OCR
+
+Analysis completed for this file.

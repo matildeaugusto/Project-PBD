@@ -1,0 +1,33 @@
+{
+    "newscast": "Telejornal_RTP_Dec_11",
+    "channel": "RTP",
+    "date": "Dec_11",
+    "total_frames": 1177,
+    "topics": {
+        "Labor": {
+            "frames": 1111,
+            "percent": 94.39,
+            "blocks": 25
+        },
+        "Politics": {
+            "frames": 45,
+            "percent": 3.82,
+            "blocks": 20
+        },
+        "Other": {
+            "frames": 17,
+            "percent": 1.44,
+            "blocks": 4
+        },
+        "International": {
+            "frames": 2,
+            "percent": 0.17,
+            "blocks": 1
+        },
+        "Health": {
+            "frames": 2,
+            "percent": 0.17,
+            "blocks": 1
+        }
+    }
+}

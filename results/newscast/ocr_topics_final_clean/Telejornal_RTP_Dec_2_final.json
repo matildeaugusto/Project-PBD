@@ -1,0 +1,38 @@
+{
+    "newscast": "Telejornal_RTP_Dec_2",
+    "channel": "RTP",
+    "date": "Dec_2",
+    "total_frames": 969,
+    "topics": {
+        "International": {
+            "frames": 139,
+            "percent": 14.34,
+            "blocks": 49
+        },
+        "Politics": {
+            "frames": 782,
+            "percent": 80.7,
+            "blocks": 66
+        },
+        "Health": {
+            "frames": 24,
+            "percent": 2.48,
+            "blocks": 11
+        },
+        "Labor": {
+            "frames": 10,
+            "percent": 1.03,
+            "blocks": 5
+        },
+        "Economy": {
+            "frames": 2,
+            "percent": 0.21,
+            "blocks": 1
+        },
+        "Justice/Crime": {
+            "frames": 12,
+            "percent": 1.24,
+            "blocks": 5
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "newscast": "Telejornal_TVI_Dec_2",
+    "channel": "TVI",
+    "date": "Dec_2",
+    "total_frames": 2079,
+    "topics": {
+        "Politics": {
+            "frames": 1976,
+            "percent": 95.05,
+            "blocks": 47
+        },
+        "Health": {
+            "frames": 18,
+            "percent": 0.87,
+            "blocks": 9
+        },
+        "International": {
+            "frames": 27,
+            "percent": 1.3,
+            "blocks": 13
+        },
+        "Justice/Crime": {
+            "frames": 34,
+            "percent": 1.64,
+            "blocks": 17
+        },
+        "Accidents": {
+            "frames": 8,
+            "percent": 0.38,
+            "blocks": 4
+        },
+        "Economy": {
+            "frames": 2,
+            "percent": 0.1,
+            "blocks": 1
+        },
+        "Other": {
+            "frames": 12,
+            "percent": 0.58,
+            "blocks": 3
+        },
+        "Sports": {
+            "frames": 2,
+            "percent": 0.1,
+            "blocks": 1
+        }
+    }
+}

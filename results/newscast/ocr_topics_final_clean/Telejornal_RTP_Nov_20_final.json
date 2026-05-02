@@ -1,0 +1,48 @@
+{
+    "newscast": "Telejornal_RTP_Nov_20",
+    "channel": "RTP",
+    "date": "Nov_20",
+    "total_frames": 514,
+    "topics": {
+        "Politics": {
+            "frames": 342,
+            "percent": 66.54,
+            "blocks": 52
+        },
+        "Labor": {
+            "frames": 48,
+            "percent": 9.34,
+            "blocks": 23
+        },
+        "Accidents": {
+            "frames": 30,
+            "percent": 5.84,
+            "blocks": 15
+        },
+        "Economy": {
+            "frames": 18,
+            "percent": 3.5,
+            "blocks": 7
+        },
+        "Other": {
+            "frames": 16,
+            "percent": 3.11,
+            "blocks": 4
+        },
+        "International": {
+            "frames": 30,
+            "percent": 5.84,
+            "blocks": 13
+        },
+        "Justice/Crime": {
+            "frames": 28,
+            "percent": 5.45,
+            "blocks": 11
+        },
+        "Health": {
+            "frames": 2,
+            "percent": 0.39,
+            "blocks": 1
+        }
+    }
+}

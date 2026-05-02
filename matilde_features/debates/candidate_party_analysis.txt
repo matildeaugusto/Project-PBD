@@ -1,0 +1,31 @@
+
+================================================================================
+📌 Analisando ficheiro: /home/matilde/Desktop/PBD/matilde_features/debates/candidate_party.pkl
+================================================================================
+
+➡ Dimensão: (8, 2)
+
+📊 Dados exportados para Excel: /home/matilde/Desktop/PBD/results/candidate_party_data.xlsx
+
+➡ Colunas:
+['Candidate', 'Party']
+
+➡ Primeiras linhas:
+           Candidate        Party
+0       Gouveia_Melo  Independent
+1     Marques_Mendes      PSD+CDS
+2             Seguro           PS
+3            Ventura           CH
+4  Cotrim_Figueiredo           IL
+
+➡ Tipos de dados:
+Candidate    str
+Party        str
+dtype: object
+
+➡ Valores em falta por coluna:
+Candidate    0
+Party        0
+dtype: int64
+
+✔ Análise concluída para este ficheiro.

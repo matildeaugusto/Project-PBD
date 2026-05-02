@@ -1,0 +1,22 @@
+
+==============================
+GLOBAL TOPIC ANALYSIS (FRAMES + PERCENTAGES)
+==============================
+
+GLOBAL TOPIC DISTRIBUTION (by frames):
+
+GLOBAL TOPIC RANKING (by blocks):
+
+====================================
+TOPICS BY CHANNEL
+====================================
+
+====================================
+COMPARATIVE ANALYSIS
+====================================
+
+Which channel talks most about each topic (frames):
+
+Dominant editorial focus per channel:
+
+Channel with highest topic diversity:

@@ -1,0 +1,43 @@
+{
+    "newscast": "Telejornal_TVI_Jan_6",
+    "channel": "TVI",
+    "date": "Jan_6",
+    "total_frames": 704,
+    "topics": {
+        "Politics": {
+            "frames": 377,
+            "percent": 53.55,
+            "blocks": 69
+        },
+        "Justice/Crime": {
+            "frames": 99,
+            "percent": 14.06,
+            "blocks": 38
+        },
+        "Health": {
+            "frames": 39,
+            "percent": 5.54,
+            "blocks": 17
+        },
+        "Accidents": {
+            "frames": 8,
+            "percent": 1.14,
+            "blocks": 4
+        },
+        "Other": {
+            "frames": 149,
+            "percent": 21.16,
+            "blocks": 29
+        },
+        "International": {
+            "frames": 26,
+            "percent": 3.69,
+            "blocks": 12
+        },
+        "Weather": {
+            "frames": 6,
+            "percent": 0.85,
+            "blocks": 3
+        }
+    }
+}

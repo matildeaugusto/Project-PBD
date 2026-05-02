@@ -1,0 +1,31 @@
+
+================================================================================
+Analyzing file: /home/matilde/Desktop/PBD/matilde_features/debates/candidate_party.pkl
+================================================================================
+
+Shape: (8, 2)
+
+Data exported to Excel: /home/matilde/Desktop/PBD/results/debates/data_structure/candidate_party_data.xlsx
+
+Columns:
+['Candidate', 'Party']
+
+First rows:
+           Candidate        Party
+0       Gouveia_Melo  Independent
+1     Marques_Mendes      PSD+CDS
+2             Seguro           PS
+3            Ventura           CH
+4  Cotrim_Figueiredo           IL
+
+Data types:
+Candidate    str
+Party        str
+dtype: object
+
+Missing values per column:
+Candidate    0
+Party        0
+dtype: int64
+
+Analysis completed for this file.

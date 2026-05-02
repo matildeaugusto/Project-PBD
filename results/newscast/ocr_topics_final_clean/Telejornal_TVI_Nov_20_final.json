@@ -1,0 +1,43 @@
+{
+    "newscast": "Telejornal_TVI_Nov_20",
+    "channel": "TVI",
+    "date": "Nov_20",
+    "total_frames": 921,
+    "topics": {
+        "Justice/Crime": {
+            "frames": 485,
+            "percent": 52.66,
+            "blocks": 93
+        },
+        "Politics": {
+            "frames": 252,
+            "percent": 27.36,
+            "blocks": 76
+        },
+        "Economy": {
+            "frames": 15,
+            "percent": 1.63,
+            "blocks": 7
+        },
+        "Other": {
+            "frames": 119,
+            "percent": 12.92,
+            "blocks": 26
+        },
+        "International": {
+            "frames": 30,
+            "percent": 3.26,
+            "blocks": 13
+        },
+        "Health": {
+            "frames": 14,
+            "percent": 1.52,
+            "blocks": 7
+        },
+        "Society": {
+            "frames": 6,
+            "percent": 0.65,
+            "blocks": 3
+        }
+    }
+}

@@ -1,0 +1,47 @@
+
+================================================================================
+📌 Analisando ficheiro: /home/matilde/Desktop/PBD/matilde_features/debates/polls_timeline.pkl
+================================================================================
+
+➡ Dimensão: (13, 10)
+
+📊 Dados exportados para Excel: /home/matilde/Desktop/PBD/results/polls_timeline_data.xlsx
+
+➡ Colunas:
+['date', 'Poll_source', 'Gouveia_Melo', 'Marques_Mendes', 'Seguro', 'Ventura', 'Cotrim_Figueiredo', 'Filipe', 'Martins', 'Pinto']
+
+➡ Primeiras linhas:
+          date  Poll_source  Gouveia_Melo  Marques_Mendes  Seguro  Ventura  Cotrim_Figueiredo  Filipe  Martins  Pinto
+0   October_13   Pitagorica          26.9            20.3    18.4     13.9                9.1     2.5      1.9    0.0
+1   October_30  Intercampus          15.4            16.6    12.3     15.8                8.4     4.6      7.1    0.0
+2   November_2      Aximage          24.4            19.2    15.7     19.2                8.2     2.7      5.0    0.9
+3  November_17   Pitagorica          21.1            22.6    17.4     14.7               12.6     2.5      4.4    1.4
+4  November_20  Intercampus          15.5            16.4    11.1     15.9               11.5     3.8      4.4    1.4
+
+➡ Tipos de dados:
+date                     str
+Poll_source              str
+Gouveia_Melo         float64
+Marques_Mendes       float64
+Seguro               float64
+Ventura              float64
+Cotrim_Figueiredo    float64
+Filipe               float64
+Martins              float64
+Pinto                float64
+dtype: object
+
+➡ Valores em falta por coluna:
+date                 0
+Poll_source          0
+Gouveia_Melo         0
+Marques_Mendes       0
+Seguro               0
+Ventura              0
+Cotrim_Figueiredo    0
+Filipe               0
+Martins              0
+Pinto                0
+dtype: int64
+
+✔ Análise concluída para este ficheiro.

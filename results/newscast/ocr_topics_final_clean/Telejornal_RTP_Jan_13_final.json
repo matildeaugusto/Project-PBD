@@ -1,0 +1,48 @@
+{
+    "newscast": "Telejornal_RTP_Jan_13",
+    "channel": "RTP",
+    "date": "Jan_13",
+    "total_frames": 763,
+    "topics": {
+        "Politics": {
+            "frames": 601,
+            "percent": 78.77,
+            "blocks": 38
+        },
+        "Health": {
+            "frames": 28,
+            "percent": 3.67,
+            "blocks": 11
+        },
+        "Other": {
+            "frames": 114,
+            "percent": 14.94,
+            "blocks": 23
+        },
+        "Labor": {
+            "frames": 4,
+            "percent": 0.52,
+            "blocks": 2
+        },
+        "Society": {
+            "frames": 4,
+            "percent": 0.52,
+            "blocks": 2
+        },
+        "Justice/Crime": {
+            "frames": 6,
+            "percent": 0.79,
+            "blocks": 3
+        },
+        "International": {
+            "frames": 4,
+            "percent": 0.52,
+            "blocks": 2
+        },
+        "Accidents": {
+            "frames": 2,
+            "percent": 0.26,
+            "blocks": 1
+        }
+    }
+}

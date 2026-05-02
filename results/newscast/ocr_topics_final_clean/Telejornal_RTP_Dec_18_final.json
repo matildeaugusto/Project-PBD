@@ -1,0 +1,38 @@
+{
+    "newscast": "Telejornal_RTP_Dec_18",
+    "channel": "RTP",
+    "date": "Dec_18",
+    "total_frames": 314,
+    "topics": {
+        "Politics": {
+            "frames": 194,
+            "percent": 61.78,
+            "blocks": 23
+        },
+        "Justice/Crime": {
+            "frames": 6,
+            "percent": 1.91,
+            "blocks": 3
+        },
+        "Other": {
+            "frames": 82,
+            "percent": 26.11,
+            "blocks": 15
+        },
+        "International": {
+            "frames": 28,
+            "percent": 8.92,
+            "blocks": 12
+        },
+        "Economy": {
+            "frames": 2,
+            "percent": 0.64,
+            "blocks": 1
+        },
+        "Sports": {
+            "frames": 2,
+            "percent": 0.64,
+            "blocks": 1
+        }
+    }
+}

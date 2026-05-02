@@ -1,0 +1,33 @@
+{
+    "newscast": "Telejornal_RTP_Jan_6",
+    "channel": "RTP",
+    "date": "Jan_6",
+    "total_frames": 698,
+    "topics": {
+        "Politics": {
+            "frames": 499,
+            "percent": 71.49,
+            "blocks": 55
+        },
+        "International": {
+            "frames": 80,
+            "percent": 11.46,
+            "blocks": 33
+        },
+        "Health": {
+            "frames": 12,
+            "percent": 1.72,
+            "blocks": 6
+        },
+        "Justice/Crime": {
+            "frames": 26,
+            "percent": 3.72,
+            "blocks": 12
+        },
+        "Other": {
+            "frames": 81,
+            "percent": 11.6,
+            "blocks": 19
+        }
+    }
+}

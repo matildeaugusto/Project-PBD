@@ -1,0 +1,28 @@
+{
+    "newscast": "Telejornal_RTP_Nov_10",
+    "channel": "RTP",
+    "date": "Nov_10",
+    "total_frames": 581,
+    "topics": {
+        "Politics": {
+            "frames": 287,
+            "percent": 49.4,
+            "blocks": 60
+        },
+        "Justice/Crime": {
+            "frames": 173,
+            "percent": 29.78,
+            "blocks": 51
+        },
+        "Labor": {
+            "frames": 71,
+            "percent": 12.22,
+            "blocks": 31
+        },
+        "Other": {
+            "frames": 50,
+            "percent": 8.61,
+            "blocks": 11
+        }
+    }
+}
