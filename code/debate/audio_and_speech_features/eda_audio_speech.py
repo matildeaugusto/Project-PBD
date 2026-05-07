@@ -17,7 +17,7 @@ data_audio = pd.read_pickle(os.path.join(folder, video + '_audio.pkl'))
 data_audio.info()
 
 
-# SIMILARITY BETWEEN DEBATES USING SOME RAW FEATURE EMBEDDINGS # maybe try all numeric features instead of subgroup
+# SIMILARITY BETWEEN DEBATES USING SOME RAW FEATURE EMBEDDINGS ## maybe try all numeric features instead of subgroup
 features = []
 for file in os.listdir(folder):
     if file.endswith('_audio.pkl'):
@@ -25,7 +25,7 @@ for file in os.listdir(folder):
         df = pd.read_pickle(path)
         features.append({
             "debate": file.replace('_audio.pkl', ''),           
-            "meanF0Hz_mean": df["meanF0Hz"].mean(),  # Pitch # maybe try q1 and q3 because of each candidate
+            "meanF0Hz_mean": df["meanF0Hz"].mean(),  # Pitch ## maybe try q1 and q3 because of each candidate
             "stdevF0Hz_mean": df["stdevF0Hz"].mean(),
             "HNR_mean": df["HNR"].mean(),  # Voice quality
             "jitter_mean": df["localJitter"].mean(),
@@ -38,7 +38,7 @@ audio_df = pd.DataFrame(features)
 X = audio_df.drop(columns=["debate"])
 X_scaled = StandardScaler().fit_transform(X)
 sim = cosine_similarity(X_scaled)
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(16, 8))
 sns.heatmap(
     sim,
     cmap="Blues",
@@ -47,8 +47,9 @@ sns.heatmap(
     yticklabels=audio_df["debate"]
 )
 plt.title("Audio Feature Similarity (Cosine)")
+plt.savefig("plots_v6/Audio_Feature_Similarity_Cosine")
 plt.tight_layout()
-plt.show()
+# plt.show()
 
 
 # SIMILARITY BETWEEN DEBATES USING LLM EMBEDDINGS
@@ -74,7 +75,8 @@ sns.heatmap(
 )
 plt.title("Debate Similarity (Speech Embeddings)")
 plt.tight_layout()
-plt.show()
+plt.savefig("plots_v6/Debate_Similarity_Speech_Cosine_Speech_Embedings")
+# plt.show()
 
 
 # CORRELATION BETWEEN FEATURES # maybe try all numeric features instead of subgroup
@@ -96,10 +98,11 @@ for file in os.listdir(folder):
         })
 audio_df = pd.DataFrame(features)
 corr = audio_df.drop(columns=["debate"]).corr()
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(14,9))
 sns.heatmap(corr, cmap="coolwarm", center=0)
 plt.title("Audio Feature Correlations")
-plt.show()
+plt.savefig("plots_v6/Audio_Feature_Correlations_Heatmap")
+# plt.show()
 
 
 # PAIRPLOTS (aggregate per debate)
@@ -121,13 +124,14 @@ audio_df = pd.DataFrame(features)
 X = audio_df.drop(columns=["debate"])
 X_scaled = StandardScaler().fit_transform(X) 
 sns.pairplot(pd.DataFrame(X_scaled, columns=X.columns), height=1.5,aspect=1)
-plt.show()
+plt.savefig("plots_v6/Audio_Feature_Correlations_Pairplot")
+# plt.show()
 
 
 # REGRESSION PLOTS
 df_scaled = pd.DataFrame(X_scaled, columns=X.columns)
 pairs = list(itertools.combinations(X.columns, 2))
-for x, y in pairs:
+for i, (x, y) in enumerate(pairs):
     x_vals = df_scaled[x].values
     y_vals = df_scaled[y].values
     lin_coef = np.polyfit(x_vals, y_vals, 1)
@@ -141,6 +145,8 @@ for x, y in pairs:
         sns.regplot(x=x_vals,y=y_vals, scatter_kws={"s": 30},line_kws={"color": "red"} )
         plt.title(f"{x} vs {y} (Linear R²={r2_lin:.2f})")
         plt.tight_layout()
+        plt.savefig(f"plots_v6/Linear_{i}")
+
     if r2_quad >= 0.5 and r2_quad > r2_lin + 0.05:
         plt.figure(figsize=(4,3))
         sns.scatterplot(x=x_vals, y=y_vals)
@@ -149,10 +155,11 @@ for x, y in pairs:
         plt.plot(xs, ys, color="red")
         plt.title(f"{x} vs {y} (Quadratic R²={r2_quad:.2f})")
         plt.tight_layout()
-plt.show()
+        plt.savefig(f"plots_v6/Quadratic_{i}")
+# plt.show()
 
 
-# TIMESERIES (single debate) - speechrate
+# TIMESERIES (single debate) - speechrate (maybe improve with "duration", and missing data)
 df = data_audio.sort_values("time stamp")
 plt.figure(figsize=(10,4))
 plt.plot(df["time stamp"], df["speechrate"], alpha=0.3)
@@ -161,10 +168,11 @@ plt.plot(df["time stamp"], df["speechrate_smooth"])
 plt.title("Speech Rate Over Time - Ventura_vs_Marques_Mendes_November_25")
 plt.xlabel("Time (s)")
 plt.ylabel("Speech Rate")
-plt.show()
+plt.savefig("plots_v6/Speech_Rate_Over_Time-Ventura_vs_Marques_Mendes_November_25")
+#plt.show()
 
 
-# TIMESERIES (single debate) - meanF0Hz
+# TIMESERIES (single debate) - meanF0Hz (maybe improve with "duration", and missing data)
 plt.figure(figsize=(10,4))
 plt.plot(df["time stamp"], df["meanF0Hz"], alpha=0.3)
 df["f0_smooth"] = df["meanF0Hz"].rolling(window=5, center=True).mean()
@@ -172,4 +180,5 @@ plt.plot(df["time stamp"], df["f0_smooth"])
 plt.title("Pitch (F0) Over Time - Ventura_vs_Marques_Mendes_November_25")
 plt.xlabel("Time (s)")
 plt.ylabel("F0 Hz")
-plt.show()
+plt.savefig("plots_v6/Pitch_F0_Over_Time-Ventura_vs_Marques_Mendes_November_25")
+# plt.show()
