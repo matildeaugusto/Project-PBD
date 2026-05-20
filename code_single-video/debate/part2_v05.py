@@ -1,3 +1,6 @@
+# TODO: Change to not be the mode (use all frame so propotion of duration matters)
+# TODO: Change to not be just frames with 1 person
+
 import pandas as pd
 import os
 import numpy as np
