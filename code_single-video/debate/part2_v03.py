@@ -1,5 +1,8 @@
 # TODO: Concatenate face and pose by concatenating PCA_30's of each (do variance plot)
-# TODO: Clustering
+# TODO: Do some clustering:
+    # hierarchical, k-means and variants (fuzzy,median,center,weighted), dbscan, spectral, gmm,...
+    # Maybe try spectral (from scikit drawings) or fuzzy c-means
+    # dendograms, elbow methods, silluette score,...
 
 import os
 import pandas as pd
@@ -110,9 +113,9 @@ plt.xlabel("PC1")
 plt.ylabel("PC2")
 save_path = os.path.join(output_folder, f"pose_pca_X2_{target}.png")
 plt.savefig(save_path, dpi=300)
-plt.show()
 html_path = os.path.join(output_folder, f"pose_pca_X2_{target}.html")
 save_plotly_scatter(X_pca, pose_frames,"PCA of Pose Keypoints Centered",html_path)
+plt.show()
 
 # ----- POSE PCA VARIANCE X2 -----
 pca_full = PCA().fit(X_scaled)
@@ -142,10 +145,9 @@ plt.xlabel("Dim 1")
 plt.ylabel("Dim 2")
 save_path = os.path.join(output_folder, f"pose_tsne_X2_{target}.png")
 plt.savefig(save_path, dpi=300)
-plt.show()
 html_path = os.path.join(output_folder, f"pose_tsne_X2_{target}.html")
 save_plotly_scatter( X_tsne, pose_frames, "t-SNE of Pose Keypoints",html_path)
-
+plt.show()
 
 
 # =====================================================================
@@ -193,25 +195,16 @@ plt.figure(figsize=(6,6))
 scatter = plt.scatter(X_face_pca[:,0], X_face_pca[:,1],c=y_idx, s=2, alpha=0.3)
 handles = []
 for i, emo in enumerate(emotions):
-    handles.append(
-        plt.Line2D(
-            [0], [0],
-            marker='o',
-            color='w',
-            label=emo,
-            markerfacecolor=cmap(i),
-            markersize=6
-        )
-    )
+    handles.append(plt.Line2D([0], [0], marker='o',color='w',label=emo,markerfacecolor=cmap(i),markersize=6))
 plt.legend(handles=handles, title="Emotion")
 plt.title("PCA of Face Landmarks (106x2 per detection)")
 plt.xlabel("PC1")
 plt.ylabel("PC2")
 save_path = os.path.join(output_folder, f"face_pca_X2_{target}.png")
 plt.savefig(save_path, dpi=300)
-plt.show()
 html_path = os.path.join(output_folder,f"face_pca_X2_{target}.html")
 save_plotly_scatter(X_face_pca, face_frames, "PCA of Face Landmarks", html_path, labels=y_emotion)
+plt.show()
 
 # ----- FACE PCA VARIANCE X2 -----
 pca_full = PCA().fit(X_face_scaled)
@@ -238,22 +231,13 @@ plt.figure(figsize=(6,6))
 handles = []
 scatter = plt.scatter(X_face_tsne[:,0], X_face_tsne[:,1], c=y_idx, s=2, alpha=0.3)
 for i, emo in enumerate(emotions):
-    handles.append(
-        plt.Line2D(
-            [0], [0],
-            marker='o',
-            color='w',
-            label=emo,
-            markerfacecolor=cmap(i),
-            markersize=6
-        )
-    )
+    handles.append(plt.Line2D( [0], [0], marker='o', color='w',label=emo, markerfacecolor=cmap(i), markersize=6))
 plt.legend(handles=handles, title="Emotion")
 plt.title("t-SNE of Face Landmarks (106x2 centered)")
 plt.xlabel("Dim 1")
 plt.ylabel("Dim 2")
 save_path = os.path.join(output_folder, f"face_tsne_X2_{target}.png")
 plt.savefig(save_path, dpi=300)
-plt.show()
 html_path = os.path.join(output_folder,f"face_tsne_X2_{target}.html")
 save_plotly_scatter( X_face_tsne, face_frames,"t-SNE of Face Landmarks", html_path, labels=y_emotion)
+plt.show()

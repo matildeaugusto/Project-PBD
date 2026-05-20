@@ -60,7 +60,7 @@ visual_df['frame_id'] = visual_df['frame_id'].astype(int)
 visual_df['time'] = visual_df['frame_id']
 
 # ----------------------------------------------------------------------------------------------------------------------
-# ALIGN VISUAL → AUDIO (FIXED)
+# ALIGN VISUAL - AUDIO (FIXED)
 single_face_frames = 0
 multi_face_frames = 0
 empty_frames = 0

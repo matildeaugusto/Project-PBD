@@ -1,5 +1,8 @@
 # TODO: Concatenate face and pose (visual) with audio by concatenating PCA_30's of each modality
-# TODO: Clustering
+# TODO: Do some clustering:
+    # hierarchical, k-means and variants (fuzzy,median,center,weighted), dbscan, spectral, gmm,...
+    # Maybe try spectral (from scikit drawings) or fuzzy c-means
+    # dendograms, elbow methods, silluette score,...
 
 import os
 import pandas as pd
@@ -11,21 +14,40 @@ from sklearn.manifold import TSNE
 import ast
 import plotly.express as px
 
-def save_plotly_audio_scatter(points,time_stamps,durations,title,save_html,labels=None,search_time=None):
-    # TODO: Add search_times to see who speaks
+def save_plotly_audio_scatter(points,time_stamps,durations,title,save_html,labels=None,search_time=[1504.0,1421.0,1230.0,569.0]):
+    # search_time=None  
+    # 569.0 = MM
+    # 1230.0 = MM e Melo
+    # 1421.0 = Melo
+    # 1504.0 = Moderador
     df_plot = pd.DataFrame({"x": points[:, 0],"y": points[:, 1],"time": time_stamps, "duration": durations})
-    fig = px.scatter(df_plot, x="x", y="y",color=labels if labels is not None else None, hover_data=["time", "duration"], title=title,opacity=0.4)
-    fig.update_traces(marker=dict(size=4))
+    fig = px.scatter(df_plot, x="x", y="y",color=labels if labels is not None else None, hover_data=["time", "duration"], title=title,opacity=0.7)
+    fig.update_traces(marker=dict(size=6))
     if search_time is not None:
         if isinstance(search_time, (int, float)):
             search_time = [search_time]
         mask = np.zeros(len(df_plot), dtype=bool)
         for t in search_time:
-            mask |= np.isclose(df_plot["time"], t, atol=0.05)
+            mask |= np.isclose(df_plot["time"], t, atol=1.0)
         df_match = df_plot[mask]
-        fig.add_scatter(x=df_match["x"],y=df_match["y"],mode="markers",name=f"Matches: {search_time}",marker=dict(size=10, color="red"),hovertext=df_match["time"].astype(str))
+        fig.add_scatter(
+            x=df_match["x"],
+            y=df_match["y"],
+            mode="markers",
+            name=f"Matches: {search_time}",
+            marker=dict(size=10, color="red"),
+            customdata=df_match[["x", "y", "time", "duration"]].values,
+            hovertemplate=(
+                "x: %{customdata[0]:.3f}<br>"
+                "y: %{customdata[1]:.3f}<br>"
+                "time: %{customdata[2]}<br>"
+                "duration: %{customdata[3]}"
+                "<extra></extra>"
+            )
+        )    
     fig.write_html(save_html)
     print(f"Saved: {save_html}")
+
 
 # =====================================================
 # CONFIG
@@ -102,10 +124,10 @@ plt.show()
 # =====================================================
 # t-SNE - Raw Audio Features
 # =====================================================
-pca = PCA(n_components=20) ## variance >0.9
-X_pca = pca.fit_transform(X_scaled) ## 
-tsne = TSNE(n_components=2, perplexity=7, random_state=42, init="pca") ## 5 "7" 8 9 10 15 30 50 (perplexity ~ dataset size)
-X_tsne = tsne.fit_transform(X_pca) ## X_scaled X_pca
+# pca = PCA(n_components=20) ## variance >0.9
+# X_pca = pca.fit_transform(X_scaled) ## 
+tsne = TSNE(n_components=2, perplexity=10, random_state=42, init="pca") ## 5 "7" 8 9 "10" 15 30 50 (perplexity ~ dataset size)
+X_tsne = tsne.fit_transform(X_scaled) ## X_scaled X_pca
 plt.figure(figsize=(7,6))
 plt.scatter(X_tsne[:, 0], X_tsne[:, 1], s=25, alpha=0.7)
 plt.title("t-SNE of Audio Features")
@@ -113,7 +135,7 @@ plt.xlabel("Dim 1")
 plt.ylabel("Dim 2")
 save_path = os.path.join(output_folder, f"audio_tsne_{target}.png")
 plt.savefig(save_path, dpi=300)
-save_plotly_audio_scatter(X_tsne,audio_df["time"].values,audio_df["duration"].values,"PCA of Audio Features",os.path.join(output_folder, f"audio_tsne_{target}.html"))
+save_plotly_audio_scatter(X_tsne,audio_df["time"].values,audio_df["duration"].values,"t-SNE of Audio Features",os.path.join(output_folder, f"audio_tsne_{target}.html"))
 plt.show()
 
 
@@ -168,7 +190,7 @@ pca_pre = PCA(n_components=0.85) ## 0.85 variance
 X_emb_scaled_pre = pca_pre.fit_transform(X_emb_scaled) ## 
 print("PCA components used:", pca_pre.n_components_) ## 
 print("Explained variance:", np.sum(pca_pre.explained_variance_ratio_)) ## 
-tsne_emb = TSNE(n_components=2,perplexity=10,random_state=42, init="pca")
+tsne_emb = TSNE(n_components=2,perplexity=15,random_state=42, init="pca") ## "10" "15"
 X_emb_tsne = tsne_emb.fit_transform(X_emb_scaled_pre) ##  X_emb_scaled_pre X_emb_scaled
 print("Emb Matrix t-SNE shape:", X_emb_tsne.shape)
 plt.figure(figsize=(7,6))
